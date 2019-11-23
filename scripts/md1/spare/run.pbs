@@ -1,0 +1,24 @@
+#!/bin/bash
+#$ -S /bin/bash
+#$ -cwd
+#$ -l gpu -l month
+#$ -l s_vmem=4G -l mem_req=4G
+
+###source ~/.zshrc
+
+set -eu
+
+ex=/work1/t2g-16IJ0004/siida/MD_progs/celeste/src/celeste_gpu
+
+cd ${PBS_O_WORKDIR}
+export LD_LIBRARY_PATH=/usr/apps.sp3/cuda/6.0/lib64:$LD_LIBRARY_PATH
+
+list=`ls -d n*`
+for ino in $list; do
+  cd $ino
+  echo $ino
+  ${ex} --inp md.cls --cfg md.inp > md.out &
+  cd ..
+done
+wait
+

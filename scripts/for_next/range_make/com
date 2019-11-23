@@ -1,0 +1,16 @@
+#
+
+  rm fort.*
+
+  ifort -o  aaa.exe   mk_rng.f
+
+# I.
+  ln -s range.info  fort.10
+# O.
+  ln -s head.info   fort.20
+
+  ./aaa.exe > res
+  more res
+  rm aaa.exe
+  rm fort.10   fort.20
+

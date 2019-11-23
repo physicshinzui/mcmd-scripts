@@ -1,0 +1,4 @@
+#!/bin/bash
+
+options="-l f_node=1 -l h_rt=00:10:00 -N DOS_ESTIMATION"
+qsub ${options} run.pbs

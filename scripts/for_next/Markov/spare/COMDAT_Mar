@@ -1,0 +1,21 @@
+c
+        implicit real*8 (a-h,o-z)
+
+        parameter (nvmx=15)
+        parameter (nbinmx=2000)
+        parameter (nbinmx2=500)
+
+        common/in1/de
+        common/in2/mvert,nbin(nvmx),nst(nvmx),nen(nvmx)
+        common/in3/ibin(nbinmx,nvmx),reac(nbinmx,nvmx)
+        common/in4/tmat(nbinmx,nbinmx,nvmx)
+
+        common/in5/range(2,nvmx)
+c******************************
+        real*16 tmat_w1,tmat_w2
+        common/dat1/tmat_w1(nbinmx2,nbinmx2),tmat_w2(nbinmx2,nbinmx2)
+        real*16 asum
+
+        common/dat2/pdf(nbinmx,nvmx)
+
+

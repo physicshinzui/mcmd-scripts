@@ -1,0 +1,55 @@
+#
+
+#################################
+  ifort  -o  aho.exe  main.f 
+#################################
+  head -1 ../current_situation > aaa
+  set mdn = `more aaa`
+  rm aaa
+  head -2 ../current_situation > aaa
+  tail -1 aaa > bbb
+  set nst = `more bbb`
+  rm aaa bbb
+
+echo " md No. = " $mdn
+echo " N of v st = " $nst
+
+  set dir = ../../19_md/md${mdn}
+  echo " Set directory :" $dir  " <---------------- OK?"
+
+  echo " Everything is OK? "
+  echo " ####  If OK, input 1. #### "
+  set ok = $<
+  if( $ok == 1) goto abc
+  echo " I stop here. "
+  exit
+
+abc:
+
+rm    -r md${mdn}_Mk  md${mdn}_Mk.tar
+mkdir    md${mdn}_Mk
+###############################
+# <I>
+  set f1 = ../v_distrib/md${mdn}/bin.info
+  set f2 = ../v_distrib/md${mdn}/tran.mat
+  ln -s $f1  fort.10
+  ln -s $f2  fort.21
+
+  ln -s  ${dir}/ttp_v_mcmd.inp  fort.22
+########
+# <O>
+  @ i = 1
+  while ( $i <= $nst )
+    @ idev = 100 + $i
+    ln -s s${i}.pdf  fort.${idev}
+    @ i ++
+  end
+
+ ./aho.exe  > res 
+
+  rm aho.exe  fort.*
+###############################
+  mv res md${mdn}_Mk
+  mv s*.pdf  md${mdn}_Mk
+# tar cvf md${mdn}_Mk.tar md${mdn}_Mk
+

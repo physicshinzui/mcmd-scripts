@@ -1,0 +1,133 @@
+  ******************************************
+  * Obtain statinary distrib. from t. mat. *
+  ******************************************
+  
+   <<input bin information>> 
+  
+   DE =    50.0000000000000     
+   N of v-states =            7
+  State:           1   N of bins:          87
+        start & end =           74         160
+  State:           2   N of bins:         116
+        start & end =          104         219
+  State:           3   N of bins:         145
+        start & end =          134         278
+  State:           4   N of bins:         176
+        start & end =          192         367
+  State:           5   N of bins:         211
+        start & end =          248         458
+  State:           6   N of bins:         238
+        start & end =          337         574
+  State:           7   N of bins:         269
+        start & end =          424         692
+  
+  reac. coord. ranges for each v-state in simulation. 
+   v-state No.:    1  -115650.0000  -112720.0000
+   v-state No.:    2  -114185.0000  -109790.0000
+   v-state No.:    3  -112720.0000  -106860.0000
+   v-state No.:    4  -109790.0000  -102465.0000
+   v-state No.:    5  -106860.0000   -98070.0000
+   v-state No.:    6  -102465.0000   -92210.0000
+   v-state No.:    7   -98070.0000   -86350.0000
+       This info. is used for shifting level of pdf. 
+  
+   <<input tmat>> 
+  
+   1    74   160    87      : info. 
+   2   104   219   116      : info. 
+   3   134   278   145      : info. 
+   4   192   367   176      : info. 
+   5   248   458   211      : info. 
+   6   337   574   238      : info. 
+   7   424   692   269      : info. 
+  
+   Check for the raw t. mat. 
+   ----- v-st:            1   max dev. from 1.0:    8.326672684688674E-017
+   ----- v-st:            2   max dev. from 1.0:    1.804112415015879E-016
+   ----- v-st:            3   max dev. from 1.0:    2.706168622523819E-016
+   ----- v-st:            4   max dev. from 1.0:    2.081668171172169E-016
+   ----- v-st:            5   max dev. from 1.0:    1.110223024625157E-016
+   ----- v-st:            6   max dev. from 1.0:    2.775557561562891E-017
+   ----- v-st:            7   max dev. from 1.0:    0.000000000000000E+000
+  
+  After convert: tmat --> tmat_w1 
+   N of power =           10  in            1
+   N of power =           20  in            1
+   N of power =           30  in            1
+   N of power =           40  in            1
+   N of power =           50  in            1
+   ----- check:            1   max dev. from 1.0:    1.925929944387236E-034
+  smaller better quantiry =   0.000000000000000000000000000000000E+0000
+  
+   N of power =           10  in            2
+   N of power =           20  in            2
+   N of power =           30  in            2
+   N of power =           40  in            2
+   N of power =           50  in            2
+   ----- check:            2   max dev. from 1.0:    0.000000000000000E+000
+  smaller better quantiry =   2.937376635584813830658304470370551E-0074
+  
+   N of power =           10  in            3
+   N of power =           20  in            3
+   N of power =           30  in            3
+   N of power =           40  in            3
+   N of power =           50  in            3
+   ----- check:            3   max dev. from 1.0:    0.000000000000000E+000
+  smaller better quantiry =   7.267247161212635485168377408933538E-0074
+  
+   N of power =           10  in            4
+   N of power =           20  in            4
+   N of power =           30  in            4
+   N of power =           40  in            4
+   N of power =           50  in            4
+   ----- check:            4   max dev. from 1.0:    0.000000000000000E+000
+  smaller better quantiry =   1.348058378395904457754559881143386E-0073
+  
+   N of power =           10  in            5
+   N of power =           20  in            5
+   N of power =           30  in            5
+   N of power =           40  in            5
+   N of power =           50  in            5
+   ----- check:            5   max dev. from 1.0:    0.000000000000000E+000
+  smaller better quantiry =   1.149657048952383007612365946691818E-0076
+  
+   N of power =           10  in            6
+   N of power =           20  in            6
+   N of power =           30  in            6
+   N of power =           40  in            6
+   N of power =           50  in            6
+   ----- check:            6   max dev. from 1.0:    0.000000000000000E+000
+  smaller better quantiry =   1.171248062306513340459467696334235E-0074
+  
+   N of power =           10  in            7
+   N of power =           20  in            7
+   N of power =           30  in            7
+   N of power =           40  in            7
+   N of power =           50  in            7
+   ----- check:            7   max dev. from 1.0:    1.925929944387236E-034
+  smaller better quantiry =   1.268234449629289191630087083972687E-0073
+  
+  
+   v state No.            1           2
+  
+   N. of overlapping data =           29
+  
+   v state No.            2           3
+  
+   N. of overlapping data =           59
+  
+   v state No.            3           4
+  
+   N. of overlapping data =           58
+  
+   v state No.            4           5
+  
+   N. of overlapping data =           88
+  
+   v state No.            5           6
+  
+   N. of overlapping data =           88
+  
+   v state No.            6           7
+  
+   N. of overlapping data =          117

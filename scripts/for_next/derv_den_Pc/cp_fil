@@ -1,0 +1,15 @@
+#
+
+  rm dat_derv_Pc.tar
+  rm -r dat_derv_Pc
+  mkdir dat_derv_Pc
+
+  @ ii = 1
+  while( $ii <= 20)
+    echo $ii
+    cp ${ii}/dden.dat  dat_derv_Pc/m${ii}
+    @ ii ++
+  end
+
+  tar cvf dat_derv_Pc.tar dat_derv_Pc
+ 

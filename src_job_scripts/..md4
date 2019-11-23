@@ -1,0 +1,14 @@
+#!/bin/bash
+
+n=`ls -d1 n* | wc -l`
+runs_per_job=3
+njobs=`echo "$n/3" | bc`
+echo $njobs
+
+group_list="t2g-16IJ0004"
+walltime="24:00:00"
+
+for i in $(seq 1 $njobs)
+do
+ t2sub -et 1 -q G -l walltime=${walltime} -W group_list=${group_list} -l select=1:mpiprocs=3:gpus=3:mem=10gb -N celeste${i} job_${i}.bash
+done

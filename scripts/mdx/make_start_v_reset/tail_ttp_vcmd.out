@@ -1,0 +1,43 @@
+#!/bin/bash
+set -eu
+
+##~2017-4-17
+#PROJ_DIR=/work1/t2g-16IAN/siida/02_s100b_ctd_work/
+
+##2017-4-17~
+PROJ_DIR=/work1/t2g-hp170020/siida/s100b_ctd_work
+
+gen_start_vert() {
+    { echo $2; echo $RANDOM; } > $1
+}
+
+move_start_vert() {
+    current_iter=`expr $i + 1`
+    if [ ! -e ${PROJ_DIR%/}/md${current_iter}/n${j}/$outfilename ]; then 
+        echo mv $outfilename ${PROJ_DIR%/}/md${current_iter}/n${j}/
+        mv $outfilename ${PROJ_DIR%/}/md${current_iter}/n${j}/
+    elif [ -e ${PROJ_DIR%/}/md${current_iter}/n${j}/$outfilename ]; then
+        echo "$outfilename exists. stop"
+        exit
+    fi
+
+}
+
+read -p "Previous iteration no. : " i
+read -p "No of runs    : " nruns
+outfilename="start.vert"
+ 
+if [ -z "${PROJ_DIR}" ]; then # if not set
+    echo "please set PROJ_DIR as an environment variable."
+    exit
+elif [ -n "${PROJ_DIR}" ]; then # if set 
+    for j in $(seq 1 $nruns); do
+        vstate=`tail -1 ${PROJ_DIR%/}/md${i}/n${j}/ttp_v_mcmd.out | awk '{print $2}'`
+        echo $vstate
+        gen_start_vert $outfilename $vstate 
+        move_start_vert
+    done
+fi
+
+
+

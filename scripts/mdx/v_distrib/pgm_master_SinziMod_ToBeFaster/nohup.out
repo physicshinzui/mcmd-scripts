@@ -1,0 +1,78 @@
+ 
+ ******************************************************
+ * Pdf's are saved in s* and v_pdf.                   *
+ *    s* is used for the subsequent procerure.        * 
+ *    v_pdf is just for monitoring the shape of pdfs. *
+ ******************************************************
+ In this computation, the transition matrix is computed 
+ using iteration of a maximum-likelihood method. 
+ Then, it takes several minites to finish the procedure.
+ 
+ <<List of some paramters used here>>
+ 
+ (1) md No. & N. of v states =  :::::::::::::: aaa :::::::::::::: 29 & :::::::::::::: bbb :::::::::::::: 4  <------------ OK?
+ 
+ (2) header of inp_c1_all:  <------------ OK?
+ 
+0.02  1000       bin size; N of bins
+6.0              initial value for Lambda.
+END
+60               No of files input.
+1   100000  990000000  1   run No.; starting step; ending step; weight.
+ 
+ (3) convergence factor (for t. mat. generation) =  :::::::::::::: converg.inp :::::::::::::: 1.0e-5  <------------ OK?
+       A small convergence factor may cause a long compu. time 
+ 
+ (4) directory for aus_coef_ty2_md*.inp: 
+       /work1/t2g-hp130061/higo/V_AUS_1t7h_box/celeste/md/inp_data  <------------ OK?
+ 
+ Everything is OK? 
+ ####  If OK, input 1. #### 
+ I stop here. 
+Checking accounting informations...
+Checking requested resources...
+Submitting a job to PBS...
+1992716.t2zpbs03
+ 
+ ******************************************************
+ * Pdf's are saved in s* and v_pdf.                   *
+ *    s* is used for the subsequent procerure.        * 
+ *    v_pdf is just for monitoring the shape of pdfs. *
+ ******************************************************
+ In this computation, the transition matrix is computed 
+ using iteration of a maximum-likelihood method. 
+ Then, it takes several minites to finish the procedure.
+ 
+ <<List of some paramters used here>>
+ 
+ (1) md No. & N. of v states =  :::::::::::::: aaa :::::::::::::: 29 & :::::::::::::: bbb :::::::::::::: 4  <------------ OK?
+ 
+ (2) header of inp_c1_all:  <------------ OK?
+ 
+0.02  1000       bin size; N of bins
+6.0              initial value for Lambda.
+END
+60               No of files input.
+1   100000  990000000  1   run No.; starting step; ending step; weight.
+ 
+ (3) convergence factor (for t. mat. generation) =  :::::::::::::: converg.inp :::::::::::::: 1.0e-5  <------------ OK?
+       A small convergence factor may cause a long compu. time 
+ 
+ (4) directory for aus_coef_ty2_md*.inp: 
+       /work1/t2g-hp130061/higo/V_AUS_1t7h_box/celeste/md/inp_data  <------------ OK?
+ 
+ Everything is OK? 
+ ####  If OK, input 1. #### 
+ I stop here. 
+ 
+ ************************************
+ * Pdf's are saved in s* and v_pdf. *
+ ************************************
+ 
+ <<List of some paramters used here>>
+ 
+ (1) md No. & N. of v states =  :::::::::::::: aaa :::::::::::::: 13 & :::::::::::::: bbb :::::::::::::: 18  <------------ OK?
+ 
+ (2) Input file for virtual range. 
+ 
+set: Variable name must begin with a letter.

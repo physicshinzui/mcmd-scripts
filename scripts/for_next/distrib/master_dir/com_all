@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#################################
+# Compilation.
+
+  ifort  -o  aho.exe  main.f
+#################################
+# <input>
+
+####################
+# <output>
+#  No modification.
+  ln -s e1hall.pdf fort.20
+
+  cp fil.all  file.name
+
+  ./aho.exe < inp_c1_all > aho_h.res
+
+  rm fort.*
+  rm aho.exe
+  rm file.name
+
+#  more aho_h.res
+  csh com_dist_mk
+

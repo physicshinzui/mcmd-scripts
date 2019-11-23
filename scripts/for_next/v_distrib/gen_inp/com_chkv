@@ -1,0 +1,80 @@
+#
+  echo " "
+  echo "   <<List of directories>>  "
+  echo " " ; ls ../ ; echo " "
+  echo " ###  Input md No. from keybord ### "
+  echo " "
+  set mdn = $<
+  echo " Your Inpu is " $mdn " OK? "
+  echo " "
+
+  set nrun = 50
+  echo " N of runs = " $nrun " OK? "
+  echo " "
+
+  echo " ### Then if OK, input 1 ### "
+  set ok = $<
+  if( $ok == 1) goto abc
+
+  echo " I stop here. "
+  exit
+#######################################
+  abc:
+
+  set dir = ../md${mdn}
+
+
+  echo ' Job No. = ' $dir
+  echo $dir > res.md${mdn}
+  cat res.md${mdn} para.inp  > aaa
+  mv aaa res.md${mdn}
+#######################################
+  ifort -O3 -o aaa.exe  check_v.f
+#######################################
+  cp input.dat input.dat_old
+
+  @ ii = 1
+
+  while( $ii <= ${nrun} )
+
+# <input>
+    echo $ii > kkk
+    ln -s  kkk  fort.11
+    ln -s ${dir}/dat_some/v${ii}  fort.10
+
+# <output>
+    ln -s  dat${ii}  fort.20
+
+##    echo "  file No. = " $ii
+    ./aaa.exe  < para.inp >> res.md${mdn}
+    rm fort.*
+    @ ii ++
+  end
+
+  rm aaa.exe
+  rm kkk
+####
+  @ jj = 1
+  cp nul gen.dat
+  while( $jj <= ${nrun} )
+    cat gen.dat dat${jj} >> xxx
+    mv xxx gen.dat
+    @ jj ++
+  end
+
+  rm dat*
+##############
+  cat head.inf  gen.dat tail.inf > input.dat
+  cp res.md${mdn}  fin
+  rm gen.dat
+
+echo "  "
+echo "  Generated file (input.dat) should be "
+echo "  copied to inp_c1_all. "
+echo '  Job No. = ' $dir
+echo "  "
+echo "  DO as [ cp input.dat " ${dir}"/inp_c1_all ]"
+echo "  "
+#######################################
+echo  "   Difference of input.dat input.dat_old is saved in data.diff. "
+diff input.dat input.dat_old  > data.diff

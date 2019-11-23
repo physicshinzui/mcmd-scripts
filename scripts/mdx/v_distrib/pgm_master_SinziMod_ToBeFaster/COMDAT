@@ -1,0 +1,29 @@
+
+c******************************************************
+        implicit real*8 (a-h,o-z)
+        parameter (nwin=10000)
+        parameter (nfilmx=500)
+        parameter (nvert=100)
+c****
+        common/in1/de,emin1
+        common/in2/nene,nfil,kktot
+        common/in3/tot,tot_cut
+        common/in4/rng(2,nvert)
+        common/in5/mvert,intv_v
+
+        character filname*80,filnamev*80,filnames*80
+        common/file1/filname(10000),filnamev(10000),filnames(10000)
+c****
+        common/dat1/pdf(nwin,nvert),pdf_cut(nwin,nvert),binpos(2,nwin)
+        common/dat2/wbin(nwin,nvert),ipos_bin(2,nvert)
+        common/dat3/nst(nfilmx),nen(nfilmx)
+        common/dat4/wgt(nfilmx)
+        common/dat5/pdf_av(nwin)
+c***
+        character mark*3
+        common/dat6/c_icou(nvert),c_icou_rng(nvert)
+cc      common/dat6/icou(nvert),icou_rng(nvert)
+c****
+        common/monit1/av_lambda(nfilmx)
+c******************************************************
+

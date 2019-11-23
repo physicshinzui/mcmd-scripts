@@ -1,0 +1,14 @@
+#
+echo "  "
+echo "********************************************"
+echo "  Have you modified the following file? "
+echo "      current_situation "
+echo "********************************************"
+echo " ====== Monitering below: ====== "
+echo "  "
+echo " ../../current_situation "
+more ../../current_situation
+echo " "
+
+#echo " *** *** *** *** "
+

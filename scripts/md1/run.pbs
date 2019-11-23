@@ -1,0 +1,25 @@
+#!/bin/bash
+#$ -S /bin/bash
+#$ -cwd
+source /etc/profile.d/modules.sh
+module load cuda python-extension/2.7
+module load intel
+module load intel-mpi
+
+# og0_v039p works on tsubame anyway.
+WORK=/gs/hs0/hp170020/kasahara/
+export KKTOOLS=${WORK}/kktools
+OMGROOT=${WORK}/omegagene/og0_v039p
+OMGTK=${WORK}/omegagene/og0_v039p/toolkit
+OMG=${OMGROOT}/omegagene_gpu
+export LD_LIBRARY_PATH=/gs/hs0/hp170020/kasahara/omegagene/og0_v039p:$LD_LIBRARY_PATH
+
+list=`ls -d n*`
+for ino in $list; do
+  cd $ino
+  echo $ino
+  ${OMG} --inp md.cls --cfg md.inp > md.out &
+  cd ..
+done
+wait
+

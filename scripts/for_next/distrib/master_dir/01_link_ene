@@ -1,0 +1,42 @@
+#!/bin/bash
+
+set -eu
+
+cat << EOS
+
+Usage:
+  $0 [INPUT  md1 directory path(FULL PATH)]
+
+EOS
+
+DIR_MD1=$1
+DIR_saved="./dat_some"
+
+if [ -e ${DIR_saved} ]; then 
+  echo "${DIR_saved}/* are removing..."
+  rm ${DIR_saved}/*
+fi
+
+#***Make symbolic links for mult.ene
+i=1
+echo "The following were Linked:"
+for j in `ls -d ${DIR_MD1%/}/n{1..3}`; do
+  ln -s $j/mult.ene  ${DIR_saved%/}/e${i}
+  ls -l  ${DIR_saved%/}/e${i}
+  i=`expr $i + 1`
+done
+
+#***Make
+ifort  -o  aho.exe  main.f
+ln -s e1hall.pdf fort.20 #Output
+#
+cp fil.all file.name
+#
+./aho.exe < inp_c1_all > aho_h.res
+#
+rm fort.*
+rm aho.exe
+rm file.name
+#
+##  more aho_h.res
+csh com_dist_mk

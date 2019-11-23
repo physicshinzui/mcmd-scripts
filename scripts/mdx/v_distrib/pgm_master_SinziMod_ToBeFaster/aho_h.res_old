@@ -1,0 +1,404 @@
+  
+  ******************************
+  * Distrib. for each v state. *
+  ******************************
+   NOTE 1: This pgm treates omegagene output files.
+  
+   NOTE 2: Normalization is dome in the whole range
+           not in each range.
+  
+  
+  ************************
+  * Subroutine para_inp. *
+  ************************
+   1) Input some parameters. 
+   2) Input file names for input. 
+   3) Initialize some quantities. 
+  
+       N of input files =   90
+  
+       bin size, N(bin), E(min) =   0.010   10000         8.000
+  N of v states =  48
+  range:   1          8.00          8.36
+  range:   2          8.18          8.54
+  range:   3          8.36          8.72
+  range:   4          8.54          8.90
+  range:   5          8.72          9.08
+  range:   6          8.90          9.26
+  range:   7          9.08          9.44
+  range:   8          9.26          9.62
+  range:   9          9.44          9.80
+  range:  10          9.62          9.98
+  range:  11          9.80         10.16
+  range:  12          9.98         10.34
+  range:  13         10.16         10.52
+  range:  14         10.34         10.70
+  range:  15         10.52         10.88
+  range:  16         10.70         11.06
+  range:  17         10.88         11.24
+  range:  18         11.06         11.42
+  range:  19         11.24         11.60
+  range:  20         11.42         11.78
+  range:  21         11.60         11.96
+  range:  22         11.78         12.14
+  range:  23         11.96         12.32
+  range:  24         12.14         12.50
+  range:  25         12.32         12.68
+  range:  26         12.50         12.86
+  range:  27         12.68         13.04
+  range:  28         12.86         13.22
+  range:  29         13.04         13.40
+  range:  30         13.22         13.58
+  range:  31         13.40         13.76
+  range:  32         13.58         13.94
+  range:  33         13.76         14.12
+  range:  34         13.94         14.30
+  range:  35         14.12         14.48
+  range:  36         14.30         14.66
+  range:  37         14.48         14.84
+  range:  38         14.66         15.02
+  range:  39         14.84         15.20
+  range:  40         15.02         15.38
+  range:  41         15.20         15.56
+  range:  42         15.38         15.74
+  range:  43         15.56         15.92
+  range:  44         15.74         16.10
+  range:  45         15.92         16.28
+  range:  46         16.10         16.46
+  range:  47         16.28         16.64
+  range:  48         16.46         17.00
+  
+ V-state range:   1    0.8000000E+01    0.8360000E+01
+    start at  bin     1  :  0.8000000E+01    0.8010000E+01: w =   0.1000000E+01
+    end   at  bin    36  :  0.8350000E+01    0.8360000E+01: w =   0.1000000E+01
+  
+ V-state range:   2    0.8180000E+01    0.8540000E+01
+    start at  bin    19  :  0.8180000E+01    0.8190000E+01: w =   0.1000000E+01
+    end   at  bin    54  :  0.8530000E+01    0.8540000E+01: w =   0.1000000E+01
+  
+ V-state range:   3    0.8360000E+01    0.8720000E+01
+    start at  bin    37  :  0.8360000E+01    0.8370000E+01: w =   0.1000000E+01
+    end   at  bin    72  :  0.8710000E+01    0.8720000E+01: w =   0.1000000E+01
+  
+ V-state range:   4    0.8540000E+01    0.8900000E+01
+    start at  bin    55  :  0.8540000E+01    0.8550000E+01: w =   0.1000000E+01
+    end   at  bin    90  :  0.8890000E+01    0.8900000E+01: w =   0.1000000E+01
+  
+ V-state range:   5    0.8720000E+01    0.9080000E+01
+    start at  bin    73  :  0.8720000E+01    0.8730000E+01: w =   0.1000000E+01
+    end   at  bin   108  :  0.9070000E+01    0.9080000E+01: w =   0.1000000E+01
+  
+ V-state range:   6    0.8900000E+01    0.9260000E+01
+    start at  bin    91  :  0.8900000E+01    0.8910000E+01: w =   0.1000000E+01
+    end   at  bin   126  :  0.9250000E+01    0.9260000E+01: w =   0.1000000E+01
+  
+ V-state range:   7    0.9080000E+01    0.9440000E+01
+    start at  bin   109  :  0.9080000E+01    0.9090000E+01: w =   0.1000000E+01
+    end   at  bin   144  :  0.9430000E+01    0.9440000E+01: w =   0.1000000E+01
+  
+ V-state range:   8    0.9260000E+01    0.9620000E+01
+    start at  bin   127  :  0.9260000E+01    0.9270000E+01: w =   0.1000000E+01
+    end   at  bin   162  :  0.9610000E+01    0.9620000E+01: w =   0.1000000E+01
+  
+ V-state range:   9    0.9440000E+01    0.9800000E+01
+    start at  bin   145  :  0.9440000E+01    0.9450000E+01: w =   0.1000000E+01
+    end   at  bin   180  :  0.9790000E+01    0.9800000E+01: w =   0.1000000E+01
+  
+ V-state range:  10    0.9620000E+01    0.9980000E+01
+    start at  bin   163  :  0.9610000E+01    0.9620000E+01: w =   0.1000000E+01
+    end   at  bin   198  :  0.9970000E+01    0.9980000E+01: w =   0.1000000E+01
+  
+ V-state range:  11    0.9800000E+01    0.1016000E+02
+    start at  bin   181  :  0.9800000E+01    0.9810000E+01: w =   0.1000000E+01
+    end   at  bin   216  :  0.1015000E+02    0.1016000E+02: w =   0.1000000E+01
+  
+ V-state range:  12    0.9980000E+01    0.1034000E+02
+    start at  bin   199  :  0.9980000E+01    0.9990000E+01: w =   0.1000000E+01
+    end   at  bin   234  :  0.1033000E+02    0.1034000E+02: w =   0.1000000E+01
+  
+ V-state range:  13    0.1016000E+02    0.1052000E+02
+    start at  bin   217  :  0.1016000E+02    0.1017000E+02: w =   0.1000000E+01
+    end   at  bin   252  :  0.1051000E+02    0.1052000E+02: w =   0.1000000E+01
+  
+ V-state range:  14    0.1034000E+02    0.1070000E+02
+    start at  bin   235  :  0.1034000E+02    0.1035000E+02: w =   0.1000000E+01
+    end   at  bin   270  :  0.1069000E+02    0.1070000E+02: w =   0.1000000E+01
+  
+ V-state range:  15    0.1052000E+02    0.1088000E+02
+    start at  bin   253  :  0.1052000E+02    0.1053000E+02: w =   0.1000000E+01
+    end   at  bin   288  :  0.1088000E+02    0.1089000E+02: w =   0.1000000E+01
+  
+ V-state range:  16    0.1070000E+02    0.1106000E+02
+    start at  bin   271  :  0.1070000E+02    0.1071000E+02: w =   0.1000000E+01
+    end   at  bin   306  :  0.1105000E+02    0.1106000E+02: w =   0.1000000E+01
+  
+ V-state range:  17    0.1088000E+02    0.1124000E+02
+    start at  bin   289  :  0.1088000E+02    0.1089000E+02: w =   0.1000000E+01
+    end   at  bin   324  :  0.1123000E+02    0.1124000E+02: w =   0.1000000E+01
+  
+ V-state range:  18    0.1106000E+02    0.1142000E+02
+    start at  bin   307  :  0.1106000E+02    0.1107000E+02: w =   0.1000000E+01
+    end   at  bin   342  :  0.1141000E+02    0.1142000E+02: w =   0.1000000E+01
+  
+ V-state range:  19    0.1124000E+02    0.1160000E+02
+    start at  bin   325  :  0.1124000E+02    0.1125000E+02: w =   0.1000000E+01
+    end   at  bin   360  :  0.1159000E+02    0.1160000E+02: w =   0.1000000E+01
+  
+ V-state range:  20    0.1142000E+02    0.1178000E+02
+    start at  bin   343  :  0.1142000E+02    0.1143000E+02: w =   0.1000000E+01
+    end   at  bin   378  :  0.1177000E+02    0.1178000E+02: w =   0.1000000E+01
+  
+ V-state range:  21    0.1160000E+02    0.1196000E+02
+    start at  bin   361  :  0.1160000E+02    0.1161000E+02: w =   0.1000000E+01
+    end   at  bin   396  :  0.1195000E+02    0.1196000E+02: w =   0.1000000E+01
+  
+ V-state range:  22    0.1178000E+02    0.1214000E+02
+    start at  bin   379  :  0.1177000E+02    0.1178000E+02: w =   0.1000000E+01
+    end   at  bin   414  :  0.1213000E+02    0.1214000E+02: w =   0.1000000E+01
+  
+ V-state range:  23    0.1196000E+02    0.1232000E+02
+    start at  bin   397  :  0.1196000E+02    0.1197000E+02: w =   0.1000000E+01
+    end   at  bin   432  :  0.1231000E+02    0.1232000E+02: w =   0.1000000E+01
+  
+ V-state range:  24    0.1214000E+02    0.1250000E+02
+    start at  bin   415  :  0.1214000E+02    0.1215000E+02: w =   0.1000000E+01
+    end   at  bin   450  :  0.1249000E+02    0.1250000E+02: w =   0.1000000E+01
+  
+ V-state range:  25    0.1232000E+02    0.1268000E+02
+    start at  bin   433  :  0.1232000E+02    0.1233000E+02: w =   0.1000000E+01
+    end   at  bin   468  :  0.1267000E+02    0.1268000E+02: w =   0.1000000E+01
+  
+ V-state range:  26    0.1250000E+02    0.1286000E+02
+    start at  bin   451  :  0.1250000E+02    0.1251000E+02: w =   0.1000000E+01
+    end   at  bin   486  :  0.1285000E+02    0.1286000E+02: w =   0.1000000E+01
+  
+ V-state range:  27    0.1268000E+02    0.1304000E+02
+    start at  bin   469  :  0.1268000E+02    0.1269000E+02: w =   0.1000000E+01
+    end   at  bin   504  :  0.1303000E+02    0.1304000E+02: w =   0.1000000E+01
+  
+ V-state range:  28    0.1286000E+02    0.1322000E+02
+    start at  bin   487  :  0.1286000E+02    0.1287000E+02: w =   0.1000000E+01
+    end   at  bin   522  :  0.1322000E+02    0.1323000E+02: w =   0.1000000E+01
+  
+ V-state range:  29    0.1304000E+02    0.1340000E+02
+    start at  bin   505  :  0.1304000E+02    0.1305000E+02: w =   0.1000000E+01
+    end   at  bin   540  :  0.1339000E+02    0.1340000E+02: w =   0.1000000E+01
+  
+ V-state range:  30    0.1322000E+02    0.1358000E+02
+    start at  bin   523  :  0.1322000E+02    0.1323000E+02: w =   0.1000000E+01
+    end   at  bin   558  :  0.1357000E+02    0.1358000E+02: w =   0.1000000E+01
+  
+ V-state range:  31    0.1340000E+02    0.1376000E+02
+    start at  bin   541  :  0.1340000E+02    0.1341000E+02: w =   0.1000000E+01
+    end   at  bin   576  :  0.1375000E+02    0.1376000E+02: w =   0.1000000E+01
+  
+ V-state range:  32    0.1358000E+02    0.1394000E+02
+    start at  bin   559  :  0.1358000E+02    0.1359000E+02: w =   0.1000000E+01
+    end   at  bin   594  :  0.1393000E+02    0.1394000E+02: w =   0.1000000E+01
+  
+ V-state range:  33    0.1376000E+02    0.1412000E+02
+    start at  bin   577  :  0.1376000E+02    0.1377000E+02: w =   0.1000000E+01
+    end   at  bin   612  :  0.1411000E+02    0.1412000E+02: w =   0.1000000E+01
+  
+ V-state range:  34    0.1394000E+02    0.1430000E+02
+    start at  bin   595  :  0.1393000E+02    0.1394000E+02: w =   0.1000000E+01
+    end   at  bin   630  :  0.1429000E+02    0.1430000E+02: w =   0.1000000E+01
+  
+ V-state range:  35    0.1412000E+02    0.1448000E+02
+    start at  bin   613  :  0.1411000E+02    0.1412000E+02: w =   0.1000000E+01
+    end   at  bin   648  :  0.1447000E+02    0.1448000E+02: w =   0.1000000E+01
+  
+ V-state range:  36    0.1430000E+02    0.1466000E+02
+    start at  bin   631  :  0.1430000E+02    0.1431000E+02: w =   0.1000000E+01
+    end   at  bin   666  :  0.1465000E+02    0.1466000E+02: w =   0.1000000E+01
+  
+ V-state range:  37    0.1448000E+02    0.1484000E+02
+    start at  bin   649  :  0.1448000E+02    0.1449000E+02: w =   0.1000000E+01
+    end   at  bin   684  :  0.1483000E+02    0.1484000E+02: w =   0.1000000E+01
+  
+ V-state range:  38    0.1466000E+02    0.1502000E+02
+    start at  bin   667  :  0.1466000E+02    0.1467000E+02: w =   0.1000000E+01
+    end   at  bin   702  :  0.1501000E+02    0.1502000E+02: w =   0.1000000E+01
+  
+ V-state range:  39    0.1484000E+02    0.1520000E+02
+    start at  bin   685  :  0.1484000E+02    0.1485000E+02: w =   0.1000000E+01
+    end   at  bin   720  :  0.1519000E+02    0.1520000E+02: w =   0.1000000E+01
+  
+ V-state range:  40    0.1502000E+02    0.1538000E+02
+    start at  bin   703  :  0.1502000E+02    0.1503000E+02: w =   0.1000000E+01
+    end   at  bin   738  :  0.1538000E+02    0.1539000E+02: w =   0.1000000E+01
+  
+ V-state range:  41    0.1520000E+02    0.1556000E+02
+    start at  bin   721  :  0.1520000E+02    0.1521000E+02: w =   0.1000000E+01
+    end   at  bin   756  :  0.1555000E+02    0.1556000E+02: w =   0.1000000E+01
+  
+ V-state range:  42    0.1538000E+02    0.1574000E+02
+    start at  bin   739  :  0.1538000E+02    0.1539000E+02: w =   0.1000000E+01
+    end   at  bin   774  :  0.1573000E+02    0.1574000E+02: w =   0.1000000E+01
+  
+ V-state range:  43    0.1556000E+02    0.1592000E+02
+    start at  bin   757  :  0.1556000E+02    0.1557000E+02: w =   0.1000000E+01
+    end   at  bin   792  :  0.1591000E+02    0.1592000E+02: w =   0.1000000E+01
+  
+ V-state range:  44    0.1574000E+02    0.1610000E+02
+    start at  bin   775  :  0.1574000E+02    0.1575000E+02: w =   0.1000000E+01
+    end   at  bin   810  :  0.1609000E+02    0.1610000E+02: w =   0.1000000E+01
+  
+ V-state range:  45    0.1592000E+02    0.1628000E+02
+    start at  bin   793  :  0.1592000E+02    0.1593000E+02: w =   0.1000000E+01
+    end   at  bin   828  :  0.1627000E+02    0.1628000E+02: w =   0.1000000E+01
+  
+ V-state range:  46    0.1610000E+02    0.1646000E+02
+    start at  bin   811  :  0.1610000E+02    0.1611000E+02: w =   0.1000000E+01
+    end   at  bin   846  :  0.1645000E+02    0.1646000E+02: w =   0.1000000E+01
+  
+ V-state range:  47    0.1628000E+02    0.1664000E+02
+    start at  bin   829  :  0.1628000E+02    0.1629000E+02: w =   0.1000000E+01
+    end   at  bin   864  :  0.1663000E+02    0.1664000E+02: w =   0.1000000E+01
+  
+ V-state range:  48    0.1646000E+02    0.1700000E+02
+    start at  bin   847  :  0.1646000E+02    0.1647000E+02: w =   0.1000000E+01
+    end   at  bin   900  :  0.1699000E+02    0.1700000E+02: w =   0.1000000E+01
+     
+  File ordinal No. =      1
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =      2
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =      3
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =      4
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =      5
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =      6
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =      7
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =      8
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =      9
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     10
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     11
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     12
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     13
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     14
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     15
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     16
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     17
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     18
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     19
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     20
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     21
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     22
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     23
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     24
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     25
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     26
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     27
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     28
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     29
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     30
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     31
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     32
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     33
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     34
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     35
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     36
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     37
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     38
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     39
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     40
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     41
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     42
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     43
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     44
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     45
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     46
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     47
+      N of data for v-file & lambda file:     9001    900000
+     
+  File ordinal No. =     48

@@ -1,0 +1,10 @@
+--work-dir            /Users/siida/Dropbox/01code/prestoPrep/work/mcmd
+--iteration-no        1
+--no-of-paralell-runs 5
+--path-of-templates   ./scripts/mdx/inputs_for_mdx
+--tpl-file            ../../inputs/all.tpl
+--shk-file            ../../inputs/all.shk
+--init-pdb            ../../inputs/npt_eq.pdb
+--i-restart           md.rst
+--atom-group-file     ../../atom_groups.inp
+--disres-file         ../../disres_all_MoreFixVerOfBindingSite.inp

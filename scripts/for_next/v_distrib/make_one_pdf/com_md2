@@ -1,0 +1,35 @@
+#
+
+rm dat_pdf/*
+
+ifort -o aaa.exe  make_one_pdf.f
+
+ln -s ../md2/1/v_2/s1.pdf  fort.101
+ln -s ../md2/1/v_2/s2.pdf  fort.102
+ln -s ../md2/1/v_2/s3.pdf  fort.103
+ln -s ../md2/1/v_2/s4.pdf  fort.104
+ln -s ../md2/1/v_2/s5.pdf  fort.105
+ln -s ../md2/1/v_2/s6.pdf  fort.106
+ln -s ../md2/1/v_2/s7.pdf  fort.107
+ln -s ../md2/1/v_2/s8.pdf  fort.108
+ln -s ../md2/1/v_2/s9.pdf  fort.109
+
+ln -s dat_pdf/1.pdf  fort.201
+ln -s dat_pdf/2.pdf  fort.202
+ln -s dat_pdf/3.pdf  fort.203
+ln -s dat_pdf/4.pdf  fort.204
+ln -s dat_pdf/5.pdf  fort.205
+ln -s dat_pdf/6.pdf  fort.206
+ln -s dat_pdf/7.pdf  fort.207
+ln -s dat_pdf/8.pdf  fort.208
+ln -s dat_pdf/9.pdf  fort.209
+
+./aaa.exe
+
+rm aaa.exe
+rm  fort.*
+
+  tar cvf  dat_pdf.tar dat_pdf
+  gzip dat_pdf.tar
+  mv dat_pdf.tar.gz ../../../../
+

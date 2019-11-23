@@ -1,0 +1,76 @@
+#
+
+echo "*********************************************************************"
+echo "* This script links simulation data to files in directory dat_some. *"
+echo "*********************************************************************"
+echo " <IMPORTANT>"
+echo "  A parameter should be set in this script as: set dir_mane = ..."
+echo " "
+
+set dir_name = /work1/higo/For_Training_VAUS/ala_ala/9_md/md_ty2_wide
+  set mdn = `more ../../current_md_num`
+
+  tail -2 ../../current_situation > aaa
+  head -1 aaa > bbb
+  tail -1 aaa > ccc
+
+  set ist = `more bbb`
+  set iend = `more ccc`
+  rm aaa bbb ccc
+
+  echo "  md No. =" $mdn "                       <--------------- OK?"
+  echo "  dir_name:" $dir_name  "<--------------- OK?"
+  echo " "
+  echo '  parameters n_start & n_end = ' ${ist} '&'  ${iend} "<--------------- OK?"
+  echo "  "
+
+  echo " Everything is OK? "
+  echo " ####  If OK, input 1. #### "
+  set ok = $<
+  if( $ok == 1) goto abc
+  echo " I stop here. "
+  exit
+#*************************************
+abc:
+
+  rm fil.e*  fil.v*
+  rm dat_some/*
+  cp nul fil.all
+  cp nul filv.all
+
+  @ ii = ${ist}
+
+while( $ii <= ${iend} )
+  set file = ${dir_name}/md${mdn}/n${ii}/mult.aus.ty2 
+  set filv = ${dir_name}/md${mdn}/n${ii}/ttp_v_mcmd.out
+  ln  -s  ${file} e${ii}
+  ln  -s  ${filv} v${ii}
+
+  echo "dat_some/"e${ii} > fil.e${ii}
+  echo "dat_some/"v${ii} > fil.v${ii}
+  cat fil.all  fil.e${ii}  > aaa
+  cat filv.all  fil.v${ii}  > bbb
+  mv aaa fil.all
+  mv bbb filv.all
+  mv e${ii}  dat_some
+  mv v${ii}  dat_some
+
+  rm fil.e${ii}  fil.v${ii}
+
+  @ ii++
+end
+
+echo " ******************************************************************"
+echo "      Please use this script only once,  "
+echo "      although multi-use does not cause any problem. "
+echo " "
+echo "      Please check if the files (e* and v*) in dat_some "
+echo "      are correctly linked to the original files by your eyes. "
+echo " ******************************************************************"
+echo "ls -la dat_some/e1"
+ls -la dat_some/e1
+echo "ls -la dat_some/v1"
+ls -la dat_some/v1
+
+exit
+

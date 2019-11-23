@@ -1,0 +1,59 @@
+set style data line
+##set key outside
+set nokey 
+set log y
+set size 1,1
+set origin 0,0
+plot [8:17.0] []     's1_cut.pdf' title '1',\
+                      's2_cut.pdf' title '2',\
+                      's3_cut.pdf' title '3',\
+                      's4_cut.pdf' title '4',\
+                      's5_cut.pdf' title '5',\
+                      's6_cut.pdf' title '6',\
+                      's7_cut.pdf' title '7',\
+                      's8_cut.pdf' title '8',\
+                      's9_cut.pdf' title '9',\
+                      's10_cut.pdf' title '10',\
+                      's11_cut.pdf' title '11',\
+                      's12_cut.pdf' title '12',\
+                      's13_cut.pdf' title '13',\
+                      's14_cut.pdf' title '14',\
+                      's15_cut.pdf' title '15',\
+                      's16_cut.pdf' title '16',\
+                      's17_cut.pdf' title '17',\
+                      's18_cut.pdf' title '18',\
+                      's19_cut.pdf' title '19',\
+                      's20_cut.pdf' title '20',\
+                      's21_cut.pdf' title '21',\
+                      's22_cut.pdf' title '22',\
+                      's23_cut.pdf' title '23',\
+                      's24_cut.pdf' title '24',\
+                      's25_cut.pdf' title '25',\
+                      's26_cut.pdf' title '26',\
+                      's27_cut.pdf' title '27',\
+                      's28_cut.pdf' title '28',\
+                      's29_cut.pdf' title '29',\
+                      's30_cut.pdf' title '30',\
+                      's31_cut.pdf' title '31',\
+                      's32_cut.pdf' title '32',\
+                      's33_cut.pdf' title '33',\
+                      's34_cut.pdf' title '34',\
+                      's35_cut.pdf' title '35',\
+                      's36_cut.pdf' title '36',\
+                      's37_cut.pdf' title '37',\
+                      's38_cut.pdf' title '38',\
+                      's39_cut.pdf' title '39',\
+                      's40_cut.pdf' title '40',\
+                      's41_cut.pdf' title '41',\
+                      's42_cut.pdf' title '42',\
+                      's43_cut.pdf' title '43',\
+                      's44_cut.pdf' title '44',\
+                      's45_cut.pdf' title '45',\
+                      's46_cut.pdf' title '46',\
+                      's47_cut.pdf' title '47',\
+                      's48_cut.pdf' title '48',\
+                      's49_cut.pdf' title '49',\
+                      's50_cut.pdf' title '50',\
+                      's51_cut.pdf' title '51',\
+                      's52_cut.pdf' title '52',\
+                      's53_cut.pdf' title '53'

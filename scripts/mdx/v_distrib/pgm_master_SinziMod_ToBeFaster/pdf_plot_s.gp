@@ -1,0 +1,59 @@
+set style data line
+##set key outside
+set nokey 
+set log y
+set size 1,1
+set origin 0,0
+plot [8:17.0] []     's1_sft.pdf' title '1',\
+                      's2_sft.pdf' title '2',\
+                      's3_sft.pdf' title '3',\
+                      's4_sft.pdf' title '4',\
+                      's5_sft.pdf' title '5',\
+                      's6_sft.pdf' title '6',\
+                      's7_sft.pdf' title '7',\
+                      's8_sft.pdf' title '8',\
+                      's9_sft.pdf' title '9',\
+                      's10_sft.pdf' title '10',\
+                      's11_sft.pdf' title '11',\
+                      's12_sft.pdf' title '12',\
+                      's13_sft.pdf' title '13',\
+                      's14_sft.pdf' title '14',\
+                      's15_sft.pdf' title '15',\
+                      's16_sft.pdf' title '16',\
+                      's17_sft.pdf' title '17',\
+                      's18_sft.pdf' title '18',\
+                      's19_sft.pdf' title '19',\
+                      's20_sft.pdf' title '20',\
+                      's21_sft.pdf' title '21',\
+                      's22_sft.pdf' title '22',\
+                      's23_sft.pdf' title '23',\
+                      's24_sft.pdf' title '24',\
+                      's25_sft.pdf' title '25',\
+                      's26_sft.pdf' title '26',\
+                      's27_sft.pdf' title '27',\
+                      's28_sft.pdf' title '28',\
+                      's29_sft.pdf' title '29',\
+                      's30_sft.pdf' title '30',\
+                      's31_sft.pdf' title '31',\
+                      's32_sft.pdf' title '32',\
+                      's33_sft.pdf' title '33',\
+                      's34_sft.pdf' title '34',\
+                      's35_sft.pdf' title '35',\
+                      's36_sft.pdf' title '36',\
+                      's37_sft.pdf' title '37',\
+                      's38_sft.pdf' title '38',\
+                      's39_sft.pdf' title '39',\
+                      's40_sft.pdf' title '40',\
+                      's41_sft.pdf' title '41',\
+                      's42_sft.pdf' title '42',\
+                      's43_sft.pdf' title '43',\
+                      's44_sft.pdf' title '44',\
+                      's45_sft.pdf' title '45',\
+                      's46_sft.pdf' title '46',\
+                      's47_sft.pdf' title '47',\
+                      's48_sft.pdf' title '48',\
+                      's49_sft.pdf' title '49',\
+                      's50_sft.pdf' title '50',\
+                      's51_sft.pdf' title '51',\
+                      's52_sft.pdf' title '52',\
+                      's53_sft.pdf' title '53'

@@ -1,0 +1,52 @@
+  #######################
+  # Mix two polynomials #
+  #######################
+  
+     weight =    1.00000000000000     
+         poly = poly(previous) + weight * deviation 
+  
+   range:   -114185.000000000       -109790.000000000     
+   Not the first md. 
+ #  (1) Input polynomial having been used for md.
+#  order of fitting parameters =  8
+#  coef =  1   0.343482023326262E+04
+#  coef =  2   0.273427214248111E+00
+#  coef =  3   0.950545133971890E-05
+#  coef =  4   0.188468606337581E-09
+#  coef =  5   0.233106861199397E-14
+#  coef =  6   0.184165206216228E-19
+#  coef =  7   0.907594518432353E-25
+#  coef =  8   0.255082650521872E-30
+#  coef =  9   0.313029980970678E-36
+#  Elow & Eup (not used) = -0.115650000000000E+06   -0.863500000000000E+05
+  
+ #  (2) Input polynomials for d ln(Pmc) / dE.
+#  order of fitting parameters =  7
+#  coef =  1   0.189672701238050E+07
+#  coef =  2   0.120958209686135E+03
+#  coef =  3   0.330418601065305E-02
+#  coef =  4   0.501189203273892E-07
+#  coef =  5   0.455906386934760E-12
+#  coef =  6   0.248708748689952E-17
+#  coef =  7   0.753405077277111E-23
+#  coef =  8   0.977660465616120E-29
+#  Elow & Eup (not used) = -0.114185000000000E+06   -0.109790000000000E+06
+  ?????????????????????????????????
+  ? Lower fitting range mismatch.? 
+  ?????????????????????????????????
+  ?????????????????????????????????
+  ? upper fitting range mismatch. ?
+  ?????????????????????????????????
+  
+ #  (3) generated polynomials for dln{Pmc(E)]/dE.
+#  order of fitting parameters =  8
+#  coef =  1   0.190016183261376E+07
+#  coef =  2   0.121231636900383E+03
+#  coef =  3   0.331369146199277E-02
+#  coef =  4   0.503073889337268E-07
+#  coef =  5   0.458237455546754E-12
+#  coef =  6   0.250550400752114E-17
+#  coef =  7   0.762481022461435E-23
+#  coef =  8   0.100316873066831E-28
+#  coef =  9   0.313029980970678E-36
+#  Elow & Eup (not used) = -0.114185000000000E+06   -0.109790000000000E+06

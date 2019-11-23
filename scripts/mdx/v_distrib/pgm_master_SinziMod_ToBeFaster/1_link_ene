@@ -1,0 +1,119 @@
+#
+echo "*********************************************************************"
+echo "* This script links simulation data to files in directory dat_some. *"
+echo "*********************************************************************"
+echo " <IMPORTANT>"
+echo "  The md directory should be set in this script as: set dir_mane = ..."
+echo " "
+
+  set dir_name = /work1/t2g-hp170020/siida/s100b_ctd_work
+
+  set md_info = ../../current_situation
+  #set md_info = ../../current_situation_2_VcMD_no_rst
+
+    head -1 $md_info > aaa
+    set mdn = `more aaa`
+    rm aaa
+
+    tail -2 $md_info  > aaa
+    head -1 aaa > bbb
+    tail -1 aaa > ccc
+
+    set ist = `more bbb`
+    set iend = `more ccc`
+    rm aaa bbb ccc
+
+    echo "  md No. =" $mdn "                       <--------------- OK?"
+    echo " "
+    echo "  dir_name:" $dir_name"/md"${mdn}"  <--------------- OK?"
+    echo " "
+    echo '  parameters n_start & n_end = ' ${ist} '&'  ${iend} "<--------------- OK?"
+    echo "  "
+
+    echo " Everything is OK? "
+    echo " ####  If OK, input 1. #### "
+    set ok = $<
+    if( $ok == 1) goto abc
+    echo " I stop here. "
+    exit
+#*************************************
+abc:
+
+  echo " "
+  echo " (1)Make links to input files."
+
+  rm fil.e*  fil.v*  fil.s*
+  rm dat_some/*
+  cp nul fil.all ; cp nul filv.all ; cp nul fils.all
+
+  @ ii = ${ist}
+
+  while( $ii <= ${iend} )
+    set dir_dir = ${dir_name}/md${mdn}/n${ii}
+    set file = ${dir_dir}/mult.ene       #lambda.out
+    set filv = ${dir_dir}/ttp_v_mcmd.out #ttp_v_aus.out
+    set fils = ${dir_dir}/start.vert 
+
+    ln  -s  ${file} e${ii}
+    ln  -s  ${filv} v${ii}
+    ln  -s  ${fils} s${ii}
+
+    echo "dat_some/"e${ii} > fil.e${ii}
+    echo "dat_some/"v${ii} > fil.v${ii}
+    echo "dat_some/"s${ii} > fil.s${ii}
+
+    cat fil.all  fil.e${ii}  > aaa
+    cat filv.all  fil.v${ii}  > bbb
+    cat fils.all  fil.s${ii}  > ccc
+
+    mv aaa fil.all ; mv bbb filv.all ; mv ccc fils.all
+    mv e${ii} dat_some ; mv v${ii} dat_some ; mv s${ii} dat_some
+
+    rm fil.e${ii}  fil.v${ii}  fil.s${ii}
+
+    @ ii++
+  end
+
+#  For the next procedure
+
+  echo ${ist} > n_start
+  echo ${iend} > n_end
+
+######################
+#  echo " "
+#  echo " (2) Generate inp_c1_all:"
+#  echo " "
+#
+# set mid = "  500000   990000000  1 "
+#  set mid = "  50000   990000000  1 "
+#  echo "     Used traj interval: " $mid   "<------------ OK?"
+#
+#  echo $iend > aaa
+#  @ ii = 1
+#  while ( $ii <= $iend )
+#
+#    echo $ii $mid > bbb
+#    cat aaa  bbb > ccc
+#    mv ccc aaa
+#    rm bbb
+#
+#    @ ii ++
+#  end
+#
+#  cat  head.inp aaa tail.inp > inp_c1_all
+######################
+echo " ******************************************************************"
+echo "      Please check if the files (e*, v* & s*) in dat_some "
+echo "      are correctly linked to the original files by your eyes. "
+echo " "
+echo "      Please check inp_c1_all. "
+echo " ******************************************************************"
+echo "ls -la dat_some/e1"
+ls -la dat_some/e1
+echo "ls -la dat_some/v1"
+ls -la dat_some/v1
+echo "ls -la dat_some/s1"
+ls -la dat_some/s1
+
+exit
+

@@ -1,0 +1,6 @@
+2017-4-14
+the programs in old_v_distrib generate wierd distributions.
+belly buttoms apperes in each distribution. 
+
+so the programs higo-san modified must be used in the construction of distributions.
+these are located in v_distrib (I also modified the original program to be faster).

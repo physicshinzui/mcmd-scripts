@@ -1,0 +1,36 @@
+#
+set mdn = 2
+set name = ../md${mdn}/1
+@ nn = 9
+
+  echo " "
+  echo " md No. you are going to " $name
+  echo " "
+  echo " #### OK? If yes, input 1. If no, input 2. ####"
+  set ok = $<
+  if( $ok == 1) goto abc
+  echo " I stop here. "
+  exit
+  echo " "
+  abc:
+
+  @ ii = 1
+
+  rm ${name}/range?
+  rm ${name}/range??
+
+  while( $ii <= $nn )
+
+    @ kk = 100 + $ii
+    cp  fort.$kk  ${name}/range${ii}
+
+    @ ii ++
+  end
+
+  echo "      End of file copy. "
+  echo " "
+###################################
+  echo " Next, keep range.info in the directory fin. "
+  echo " "
+  cp range.info fin/range.info_md${mdn} 
+

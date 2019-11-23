@@ -1,0 +1,48 @@
+#!/bin/csh
+
+echo "**************************************************"
+echo "* Please make nvert.dat range.dat by your hands. *"
+echo "**************************************************"
+
+head -1 ../md.no > L1
+set mdn = `more L1 `
+  echo " "
+  echo " Current  md No = " $mdn
+  echo " "
+
+  @ pre = $mdn - 1
+#
+  ifort -o abc.exe set_vert.f
+  ln -s nvert.dat  fort.20
+#
+
+set n = 1
+while ( $n <= 50 )
+
+#  General/
+   tail -1   ../../md${pre}/n${n}/mult.ene > aaa
+
+  ln -s aaa fort.10
+  ln -s start.vert  fort.11
+
+  ./abc.exe < range.dat
+
+  @ kk = 10000 + $n
+  echo $kk > bbb
+  cat start.vert  bbb  > ccc
+  mv ccc start.vert
+  rm bbb
+
+  mv  start.vert  ../n${n}
+  rm fort.10  fort.11
+
+  @ n ++
+end
+
+  rm L1
+  rm abc.exe  fort.20  aaa
+  echo " "
+  echo " Current  md No = " $mdn
+  echo " "
+
+exit

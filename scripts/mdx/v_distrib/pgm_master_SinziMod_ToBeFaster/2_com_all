@@ -1,0 +1,133 @@
+
+##cho " exit "
+##exit
+
+#################################
+  set cntl_f = current_situation #current_situation_2_VcMD_no_rst
+
+  head -1 ../../$cntl_f > aaa
+  set mdn = `more aaa`
+  rm aaa
+
+  head -2 ../../$cntl_f > aaa
+  tail -1 aaa > bbb
+  set nst = `more bbb`
+  rm aaa bbb
+
+  tail -1 ../../$cntl_f  > aaa
+  set nrun = `more aaa`
+  rm aaa
+#################################
+
+  echo " "
+  echo " ************************************"
+  echo " * Pdf's are saved in s* and v_pdf. *"
+  echo " ************************************"
+  echo " "
+#****
+  echo " <<List of some paramters used here>>"
+  echo " "
+  echo " (1) md No. & N. of v states = " $mdn "&" $nst " <------------ OK?"
+  echo " "
+
+  echo " (2) Input file for virtual range. "
+  echo " "
+    #set dir_coef = ../../../2_VcMD_no_rst/inp_dat/vcmd_md${mdn}_100.inp 
+  set dir_coef = /work1/t2g-hp170020/siida/s100b_ctd_work/md${mdn}/ttp_v_mcmd.inp 
+  echo "Dir_coef = " $dir_coef 
+
+  echo      "      virtual range is: " $dir_coef " <------------ OK?"
+  echo " "
+c****
+  echo ############### selection ################
+  echo " Which do you prefer inp_c1_all or inp_c1_all_new?   <------ Important "
+  echo "  input 1 --> inp_c1_all "
+  echo "  input 2 --> inp_c1_all_new "
+  echo " Please input: "
+  set isel = $<
+  echo " "
+
+  if( $isel == 1 ) then
+    echo "  You input 1 --> inp_c1_all "
+    set inpf = inp_c1_all
+  endif
+  if( $isel == 2 ) then
+    echo "  You input 2 --> inp_c1_all_new "
+    set inpf = inp_c1_all_new
+  endif
+
+  echo " input control file: " $inpf " <----------- OK? "
+
+  echo " "
+#****
+  echo " Everything is OK? "
+  echo " ####  If OK, input 1. #### "
+  set ok = $<
+  if( $ok == 1) goto abc
+  echo " I stop here. "
+  exit
+
+abc:
+
+# Set file for output.
+  set out = v_pdf
+  rm -r ${out}
+  rm v_pdf.*
+  mkdir v_pdf
+#################################
+# Compilation.
+
+  ifort  -o  aho.exe  main_v.f  para_inp.f  sum_pdf.f  sum_pdf_cut.f   \
+                      out_pdf_cut.f  out_pdf_shft.f  out_pdf_raw.f
+
+#################################
+# (1) Compute the original pdf.
+
+# <input>  File-name file.
+  ln -s ${dir_coef}  fort.22
+  cp  fil.all  file.name
+  cp  filv.all  filev.name
+  cp  fils.all  files.name
+
+# <output>
+  ln -s  ${out}/v_prob.dat  fort.41 
+  ln -s  ${out}/pdf_av.dat  fort.98
+  ln -s  ${out}/pdf_av_log.dat  fort.97
+  ln -s  weight.dat         fort.55
+
+#  Three types of pdf.
+  @ ii = 1
+  while ($ii <= $nst ) 
+
+    @ idvc  = 1000 + $ii
+    @ idvs  = 2000 + $ii
+    @ idvr  = 3000 + $ii
+
+    ln -s ${out}/s${ii}_cut.pdf  fort.${idvc}
+    ln -s ${out}/s${ii}_sft.pdf  fort.${idvs}
+    ln -s ${out}/s${ii}_raw.pdf  fort.${idvr}
+    @ ii ++
+  end
+
+  ./aho.exe < $inpf  > aho_h.res
+##  ./aho.exe < inp_c1_all > aho_h.res
+
+  rm fort.*
+  rm file.name  filev.name
+  rm aho.exe
+
+  cp pdf_plot.gp  ${out}
+  cp pdf_plot_s.gp  ${out}
+
+  if( $isel == 1 ) then
+    rm -r ${out}_weight_1 
+    cp -r ${out} ${out}_weight_1
+    cp aho_h.res ${out}_weight_1
+  endif
+  if( $isel == 2 ) then
+    cp aho_h.res ${out}
+  endif
+
+  exit
+
+#####################

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+t2sub -et 1 -q G -l walltime=24:00:00 \
+                 -W group_list=t2g-16IJ0004 \
+                 -l select=1:mpiprocs=3:gpus=3:mem=10gb \
+                 -N celeste1 run.pbs
