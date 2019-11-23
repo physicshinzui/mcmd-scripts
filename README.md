@@ -26,5 +26,6 @@
 ### Actual Procedure
 Not completed.
 
-1. md1 
-2. mdx
+1. Put inputs in inputs dir.
+2. Check md1 
+3. mdx
