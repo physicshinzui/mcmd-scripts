@@ -6,7 +6,7 @@ Usage:
   $0 [INPUT md1 directory path ] 
 EOS
 
-rm -rf ? ??
+#rm -rf ? ??
 
 Md1Dir=$1
 for i in `ls $Md1Dir`;do
