@@ -12,10 +12,10 @@ EOS
 DIR_MD1=$1
 DIR_saved="./dat_some"
 
-if [ -e ${DIR_saved} ]; then 
-  echo "${DIR_saved}/* are removing..."
-  rm ${DIR_saved}/*
-fi
+#if [ -e ${DIR_saved} ]; then 
+#  echo "${DIR_saved}/* are removing..."
+#  rm ${DIR_saved}/*
+#fi
 
 #***Make symbolic links for mult.ene
 i=1
@@ -27,7 +27,8 @@ for j in `ls -d ${DIR_MD1%/}/n{1..3}`; do
 done
 
 #***Make
-ifort  -o  aho.exe  main.f
+gfortran -o  aho.exe  main.f
+#ifort  -o  aho.exe  main.f
 ln -s e1hall.pdf fort.20 #Output
 #
 cp fil.all file.name

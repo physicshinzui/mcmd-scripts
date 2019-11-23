@@ -1,7 +1,8 @@
 #################################
   limit coredumpsize 0
 # Compilation.
-  ifort  -o  uuu.exe  mk_e1dist.f
+  gfortran  -o  uuu.exe  mk_e1dist.f
+  #ifort  -o  uuu.exe  mk_e1dist.f
 #################################
 # <input>
 

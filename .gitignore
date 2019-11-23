@@ -1,1 +1,4 @@
 /md1/
+*.pdf
+/scripts/md1/distrib/?
+/scripts/md1/distrib/??

@@ -3,11 +3,7 @@
 rm pdf_res/*.pdf
 rm pdf_res.tar.gz
 
-for i in $(seq 1 30); do
+for i in $(seq 1 10); do
   cp ${i}/e1hall.pdf pdf_res/${i}a.pdf
   cp ${i}/e1.pdf  pdf_res/${i}.pdf
 done
-
-tar cvf pdf_res.tar pdf_res
-gzip pdf_res.tar
-
