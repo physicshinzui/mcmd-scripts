@@ -1,2 +1,2 @@
 
-p "1/dden.dat","2/dden.dat","3/dden.dat","4/dden.dat","5/dden.dat","6/dden.dat","7/dden.dat","8/dden.dat","9/dden.dat","10/dden.dat","11/dden.dat","12/dden.dat","13/dden.dat","14/dden.dat","15/dden.dat","16/dden.dat","17/dden.dat","18/dden.dat","19/dden.dat","20/dden.dat","21/dden.dat","22/dden.dat","23/dden.dat","24/dden.dat","25/dden.dat","26/dden.dat","27/dden.dat","28/dden.dat","29/dden.dat","30/dden.dat"
+p "1/dden.dat","2/dden.dat","3/dden.dat","4/dden.dat","5/dden.dat","6/dden.dat","7/dden.dat","8/dden.dat","9/dden.dat","10/dden.dat"

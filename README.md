@@ -5,6 +5,7 @@
 ### Directories
 - `md1`    : to perform canonical MD runs so that the density of states (DOS) are estimated by multiple runs at different temperature [^dos_exp1].
 
+
 [^dos_exp1]: We need to guess DOS at first! Just because we are not sure the value of DOS beforehand! We can't calculate the baias potential $E_{\rm mc}=RT\ln[n(E)]$ then.
 
 - `mdx`    : to perform V-McMD iterations (x = 2, 3, 4,...)
@@ -22,6 +23,9 @@
 [^dos]: More specifically, the parameters are coefficients of a polynomial function used to fit multicanonical flat distribution. 
 
 - `kill_jobs.sh`   : to kill jobs on TSUBAME instantly. You can use it when you find runs wrong.
+
+- `script/md1/derv_den_Pc`: 
+
 
 ### Actual Procedure
 Not completed.
